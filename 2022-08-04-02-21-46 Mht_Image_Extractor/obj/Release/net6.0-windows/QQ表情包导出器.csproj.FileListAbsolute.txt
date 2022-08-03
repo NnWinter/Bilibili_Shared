@@ -1,0 +1,15 @@
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\bin\Release\net6.0-windows\QQ表情包导出器.exe
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\bin\Release\net6.0-windows\QQ表情包导出器.deps.json
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\bin\Release\net6.0-windows\QQ表情包导出器.runtimeconfig.json
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\bin\Release\net6.0-windows\QQ表情包导出器.dll
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\bin\Release\net6.0-windows\QQ表情包导出器.pdb
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.csproj.AssemblyReference.cache
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.AssemblyInfoInputs.cache
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.AssemblyInfo.cs
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.csproj.CoreCompileInputs.cache
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.dll
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\refint\QQ表情包导出器.dll
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.pdb
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\QQ表情包导出器.genruntimeconfig.cache
+Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0-windows\ref\QQ表情包导出器.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "QQ表情包导出器/1.0.0": {
+        "runtime": {
+          "QQ表情包导出器.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QQ表情包导出器/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
