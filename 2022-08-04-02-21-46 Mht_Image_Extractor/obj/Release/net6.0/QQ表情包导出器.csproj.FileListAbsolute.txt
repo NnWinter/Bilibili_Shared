@@ -1,5 +1,0 @@
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0\QQ表情包导出器.csproj.AssemblyReference.cache
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0\QQ表情包导出器.GeneratedMSBuildEditorConfig.editorconfig
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0\QQ表情包导出器.AssemblyInfoInputs.cache
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0\QQ表情包导出器.AssemblyInfo.cs
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\obj\Release\net6.0\QQ表情包导出器.csproj.CoreCompileInputs.cache

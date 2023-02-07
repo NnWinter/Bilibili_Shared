@@ -1,5 +1,0 @@
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\publish\QQ表情包导出器.exe
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\publish\QQ表情包导出器.dll
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\publish\QQ表情包导出器.deps.json
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\publish\QQ表情包导出器.runtimeconfig.json
-Z:\Nn Document\C#\A_工具\QQ表情包导出器\publish\QQ表情包导出器.pdb
