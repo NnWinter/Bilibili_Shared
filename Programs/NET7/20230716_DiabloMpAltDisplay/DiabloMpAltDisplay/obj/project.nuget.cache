@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QtXd++g84m4k6lGfYcT82OMYsaYiIJjiXeqAnRBA/T+xX8yVHrGQ082koJg6yyBXYul8BXefFLLYPAZzu+GIeg==",
+  "success": true,
+  "projectFilePath": "D:\\Win11\\Administrator\\Documents\\GitHub\\Bilibili_Shared\\Programs\\NET7\\20230716_DiabloMpAltDisplay\\DiabloMpAltDisplay\\DiabloMpAltDisplay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.28\\microsoft.windows.sdk.net.ref.10.0.17763.28.nupkg.sha512"
+  ],
+  "logs": []
+}
