@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiabloMpAltDisplay", "DiabloMpAltDisplay.csproj", "{6BADBB56-A85D-4594-AE63-DF75423AFAA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "技能切换器", "..\技能切换器\技能切换器.csproj", "{1D4A68C4-D663-4699-8F9A-33CB67FD2276}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6BADBB56-A85D-4594-AE63-DF75423AFAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BADBB56-A85D-4594-AE63-DF75423AFAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BADBB56-A85D-4594-AE63-DF75423AFAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4A68C4-D663-4699-8F9A-33CB67FD2276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4A68C4-D663-4699-8F9A-33CB67FD2276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4A68C4-D663-4699-8F9A-33CB67FD2276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4A68C4-D663-4699-8F9A-33CB67FD2276}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

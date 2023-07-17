@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mKsV4/75DDB1sMfBTCYRfP7+EkfVCvnMVxkXJCJ9UeVjJzNMWIgd52WJj2GMifpASxFOmdAKv3DIpOkQ9ZbtFQ==",
+  "success": true,
+  "projectFilePath": "D:\\Win11\\Administrator\\Documents\\GitHub\\Bilibili_Shared\\Programs\\NET7\\20230716_DiabloMpAltDisplay\\技能切换器\\技能切换器.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.28\\microsoft.windows.sdk.net.ref.10.0.17763.28.nupkg.sha512"
+  ],
+  "logs": []
+}
