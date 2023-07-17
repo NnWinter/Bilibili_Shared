@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "mKsV4/75DDB1sMfBTCYRfP7+EkfVCvnMVxkXJCJ9UeVjJzNMWIgd52WJj2GMifpASxFOmdAKv3DIpOkQ9ZbtFQ==",
+  "dgSpecHash": "trayVTR++IHp1ToG1og8qXFrqYmmLfwh6jygJbnzEmFG2Nz1F5VzPf8v6+Swf4e22U2D9ZC3Z6BKDanX5C2cLQ==",
   "success": true,
   "projectFilePath": "D:\\Win11\\Administrator\\Documents\\GitHub\\Bilibili_Shared\\Programs\\NET7\\20230716_DiabloMpAltDisplay\\技能切换器\\技能切换器.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\h.hooks\\1.6.0\\h.hooks.1.6.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\h.inputsimulator\\1.4.0\\h.inputsimulator.1.4.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.28\\microsoft.windows.sdk.net.ref.10.0.17763.28.nupkg.sha512"
   ],
   "logs": []

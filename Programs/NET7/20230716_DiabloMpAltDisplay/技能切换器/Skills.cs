@@ -16,6 +16,8 @@ namespace 技能切换器
         private static readonly Vector2 BAR_START = new Vector2(0.4183f, 0.9306f);
         private static readonly float BAR_PADDING = 0.0328f;
 
+        private static readonly Vector2 PANEL_CLOSE = new Vector2(0.6281f, 0.2326f);
+
         public static Point[,] GetSkillLocs(Screen screen)
         {
             var skills = new Point[6, 6];
@@ -46,6 +48,13 @@ namespace 技能切换器
         private static Vector2 GetScreenSize(Screen screen)
         {
             return new Vector2(screen.Bounds.Width, screen.Bounds.Height);
+        }
+        public static Point GetPanelCloseLoc(Screen screen)
+        {
+            var screenSize = GetScreenSize(screen);
+            var vec = PANEL_CLOSE * screenSize;
+
+            return new Point((int)vec.X, (int)vec.Y);
         }
     }
 }

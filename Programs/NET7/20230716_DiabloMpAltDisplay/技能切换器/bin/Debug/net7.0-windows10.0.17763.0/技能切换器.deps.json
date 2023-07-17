@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "技能切换器/1.0.0": {
         "dependencies": {
+          "H.Hooks": "1.6.0",
+          "H.InputSimulator": "1.4.0",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.17763.28"
         },
         "runtime": {
@@ -25,7 +27,40 @@
             "fileVersion": "2.0.1.40881"
           }
         }
-      }
+      },
+      "H.Hooks/1.6.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/H.Hooks.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      },
+      "H.InputSimulator/1.4.0": {
+        "runtime": {
+          "lib/net7.0/H.InputSimulator.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/5.0.0": {},
+      "Microsoft.Win32.Registry/5.0.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
+      "System.Security.AccessControl/5.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {}
     }
   },
   "libraries": {
@@ -38,6 +73,48 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "H.Hooks/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9jAI5T+/93i+4oXjmgRjS6hH25tJCyPHAgH8XObHvpt4304SKzxVpMBVR0k4S5xVBkeNHgiuLI4/kXbS+RKCfg==",
+      "path": "h.hooks/1.6.0",
+      "hashPath": "h.hooks.1.6.0.nupkg.sha512"
+    },
+    "H.InputSimulator/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ylXSDSoUBZ2RiQFNxj/RaTYMumqEcClXwyw/qSu+GBshv0ecOJyXFXR0TeohOwiaf8+Yzf7ag60vZzOqQ38EGg==",
+      "path": "h.inputsimulator/1.4.0",
+      "hashPath": "h.inputsimulator.1.4.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+      "path": "microsoft.netcore.platforms/5.0.0",
+      "hashPath": "microsoft.netcore.platforms.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.Registry/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+      "path": "microsoft.win32.registry/5.0.0",
+      "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+      "path": "system.security.accesscontrol/5.0.0",
+      "hashPath": "system.security.accesscontrol.5.0.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "path": "system.security.principal.windows/5.0.0",
+      "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
     }
   }
 }

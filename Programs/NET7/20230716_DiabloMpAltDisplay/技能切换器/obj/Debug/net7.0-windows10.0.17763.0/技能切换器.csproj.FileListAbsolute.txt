@@ -16,3 +16,5 @@ D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230716_D
 D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230716_DiabloMpAltDisplay\技能切换器\obj\Debug\net7.0-windows10.0.17763.0\技能切换器.pdb
 D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230716_DiabloMpAltDisplay\技能切换器\obj\Debug\net7.0-windows10.0.17763.0\技能切换器.genruntimeconfig.cache
 D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230716_DiabloMpAltDisplay\技能切换器\obj\Debug\net7.0-windows10.0.17763.0\ref\技能切换器.dll
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230716_DiabloMpAltDisplay\技能切换器\bin\Debug\net7.0-windows10.0.17763.0\H.InputSimulator.dll
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230716_DiabloMpAltDisplay\技能切换器\bin\Debug\net7.0-windows10.0.17763.0\H.Hooks.dll

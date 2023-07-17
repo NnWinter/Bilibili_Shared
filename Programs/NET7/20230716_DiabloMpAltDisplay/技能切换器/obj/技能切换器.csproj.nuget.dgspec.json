@@ -44,6 +44,16 @@
       "frameworks": {
         "net7.0-windows10.0.17763": {
           "targetAlias": "net7.0-windows10.0.17763.0",
+          "dependencies": {
+            "H.Hooks": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "H.InputSimulator": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
