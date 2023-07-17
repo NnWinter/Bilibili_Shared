@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DiabloMpAltDisplay
 {
@@ -14,7 +15,7 @@ namespace DiabloMpAltDisplay
         /// <summary>
         /// 血条和蓝条相对于屏幕的坐标上界和下界比例
         /// </summary>
-        private static readonly (float y_top, float y_bottom) BARS_SCREEN_POSITION_RATIO_Y = new(0.86f, 0.98f);
+        private static readonly (float y_top, float y_bottom) BARS_SCREEN_POSITION_RATIO_Y = new(0.86f, 0.978f);
         /// <summary>
         /// 血条相对于屏幕的 X 坐标比例
         /// </summary>
@@ -27,32 +28,36 @@ namespace DiabloMpAltDisplay
         /// <summary>
         /// 条的宽度
         /// </summary>
-        private const int BAR_WIDTH = 3;
+        private const int BAR_WIDTH = 6;
 
         /// <summary>
-        /// 条颜色 与 其他颜色的平均值的比例的阈值（超过阈值算作有量）
+        /// 饱和度阈值
         /// </summary>
-        private const float BAR_COLOR_THRESHOLD = 2f;
+        private const float BAR_SAT_THRESHOLD = 0.5f;
+
+        /// <summary>
+        /// 计算时取平均数
+        /// </summary>
+        private const int SMOOTH_SIZE = 5;
 
         /// <summary>
         /// 每次更新间隔(ms)
         /// </summary>
-        private const int UPDATE_INTERVAL = 5000;
+        private const int UPDATE_INTERVAL = 10;
 
         /// <summary>
         /// 获得血条的位置
         /// </summary>
         /// <param name="screen">用于获得尺寸的屏幕</param>
         /// <returns>血条的矩形范围</returns>
-        private static Rectangle GetBarRectangle(Screen screen, BarType barType)
+        public static Rectangle GetBarRectangle(Size size, BarType barType)
         {
-            var screenSize = screen.WorkingArea.Size;
             var barX = barType == BarType.HP ? HP_BAR_SCREEN_POSITION_RATIO_X : MP_BAR_SCREEN_POSITION_RATIO_X;
             return new Rectangle(
-                (int)((barX * screenSize.Width)),
-                (int)(BARS_SCREEN_POSITION_RATIO_Y.y_top * screenSize.Height),
-                (int)((barX * screenSize.Width) + BAR_WIDTH),
-                (int)((BARS_SCREEN_POSITION_RATIO_Y.y_bottom - BARS_SCREEN_POSITION_RATIO_Y.y_top) * screenSize.Height)
+                (int)((barX * size.Width)-(BAR_WIDTH/2)),
+                (int)(BARS_SCREEN_POSITION_RATIO_Y.y_top * size.Height),
+                (int)(BAR_WIDTH),
+                (int)((BARS_SCREEN_POSITION_RATIO_Y.y_bottom - BARS_SCREEN_POSITION_RATIO_Y.y_top) * size.Height)
                 );
         }
 
@@ -61,10 +66,10 @@ namespace DiabloMpAltDisplay
         private Rectangle HpZone { get; init; }
         private Rectangle MpZone { get; init; }
 
-        public BarStatus(Screen screen)
+        public BarStatus(Size size)
         {
-            HpZone = GetBarRectangle(screen, BarType.HP);
-            MpZone = GetBarRectangle(screen, BarType.MP);
+            HpZone = GetBarRectangle(size, BarType.HP);
+            MpZone = GetBarRectangle(size, BarType.MP);
 
             Updater = new System.Timers.Timer();
             Updater.Elapsed += Update;
@@ -97,29 +102,58 @@ namespace DiabloMpAltDisplay
 
         float GetBarStatus(Bitmap bmp, BarType bar)
         {
-            var colors = GetBarAvgChannels(bmp);
+            var sats = GetBarSats(bmp);
+            var values = GetValues(sats);
 
-            return 0f;
+            return GetValue(values);
         }
 
-        Color[] GetBarAvgChannels(Bitmap bmp)
+        float[] GetBarSats(Bitmap bmp)
         {
-            Color[] avgColors = new Color[bmp.Height];
+            float[] avgSats = new float[bmp.Height];
             for (int y = 0; y < bmp.Height; y++)
             {
-                var colors = new Color[bmp.Width];
+                var sats = new float[bmp.Width];
                 for (int x = 0; x < bmp.Width; x++)
                 {
-                    colors[x] = bmp.GetPixel(x, y);
+                    sats[x] = bmp.GetPixel(x, y).GetSaturation();
                 }
-                avgColors[y] = Color.FromArgb(
-                    (int)colors.Average(c => c.A),
-                    (int)colors.Average(c => c.R),
-                    (int)colors.Average(c => c.G),
-                    (int)colors.Average(c => c.B)
-                    );
+                avgSats[y] = sats.Average();
             }
-            return avgColors;
+            return avgSats;
+        }
+
+        float[] GetValues(float[] sats)
+        {
+            float[] smoothedArray = new float[sats.Length];
+
+            for (int i = 0; i < sats.Length; i++)
+            {
+                float sum = 0;
+                int count = 0;
+
+                for (int j = Math.Max(0, i - SMOOTH_SIZE + 1); j <= i; j++)
+                {
+                    sum += sats[j];
+                    count++;
+                }
+
+                smoothedArray[i] = sum / count;
+            }
+
+            return smoothedArray;
+        }
+
+        float GetValue(float[] values)
+        {
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] > BAR_SAT_THRESHOLD)
+                {
+                    return 1 - ((float)i / values.Length);
+                }
+            }
+            return 0;
         }
 
         public enum BarType

@@ -10,35 +10,36 @@ namespace DiabloMpAltDisplay
     {
         public static void Run()
         {
-            var screen = Screen.PrimaryScreen;
-            var bmp = new Bitmap(screen.WorkingArea.Width, screen.WorkingArea.Height);
-            var g = Graphics.FromImage(bmp);
-            g.CopyFromScreen(0, 0, 0,0,bmp.Size);
-            g.Flush();
+            Bitmap bmp = (Bitmap)Image.FromFile("sample_A.png");
 
-            bmp.Save("debug_0.png");
+            var selectionArea = BarStatus.GetBarRectangle(bmp.Size, BarStatus.BarType.HP);
 
-            var bmp2 = new Bitmap(screen.WorkingArea.Width, screen.WorkingArea.Height);
-            var g1 = Graphics.FromImage(bmp2);
-
-            for (int x = 0; x < bmp.Width; x++)
+            // 创建一个新的Bitmap，将选区复制到新的图像中
+            Bitmap selectedRegion = new Bitmap(selectionArea.Width, selectionArea.Height);
+            using (Graphics g = Graphics.FromImage(selectedRegion))
             {
-                for (int y = 0; y < bmp.Height;y++)
-                {
-                    var color = bmp.GetPixel(x, y);
-
-                    var hue = color.GetHue();
-                    var sat = color.GetSaturation();
-
-                    var r = (int)(hue / 360f * 255f);
-                    var b = (int)(sat * 255f);
-
-                    var newColor = Color.FromArgb(r, 0, b);
-                    g1.DrawRectangle(new Pen(newColor), x, y, 1, 1);
-                }
+                g.DrawImage(bmp, new Rectangle(0, 0, selectionArea.Width, selectionArea.Height), selectionArea, GraphicsUnit.Pixel);
             }
-            g1.Flush();
-            bmp2.Save("debug.png");
+
+            selectedRegion.Save("selected_region.png");
+
+
+            float[] satBar = new float[selectedRegion.Height];
+            for (int y = 0; y < selectedRegion.Height; y++)
+            {
+                float[] sats = new float[selectedRegion.Width];
+                for (int x = 0; x < selectedRegion.Width; x++)
+                {
+                    sats[x] = selectedRegion.GetPixel(x, y).GetSaturation();
+                }
+                float avg = sats.Average();
+                satBar[y] = avg;
+            }
+
+            for (int i = 0; i < satBar.Length; i++)
+            {
+                Console.WriteLine(satBar[i]);
+            }
         }
     }
 }
