@@ -25,9 +25,19 @@ namespace DiabloMpAltDisplay
         private const float MP_BAR_SCREEN_POSITION_RATIO_X = 0.682f;
 
         /// <summary>
-        /// 条的宽度比例 (相对于屏幕)
+        /// 条的宽度
         /// </summary>
-        private const float BAR_WIDTH_RATIO = 0.002f;
+        private const int BAR_WIDTH = 3;
+
+        /// <summary>
+        /// 条颜色 与 其他颜色的平均值的比例的阈值（超过阈值算作有量）
+        /// </summary>
+        private const float BAR_COLOR_THRESHOLD = 2f;
+
+        /// <summary>
+        /// 每次更新间隔(ms)
+        /// </summary>
+        private const int UPDATE_INTERVAL = 5000;
 
         /// <summary>
         /// 获得血条的位置
@@ -39,44 +49,77 @@ namespace DiabloMpAltDisplay
             var screenSize = screen.WorkingArea.Size;
             var barX = barType == BarType.HP ? HP_BAR_SCREEN_POSITION_RATIO_X : MP_BAR_SCREEN_POSITION_RATIO_X;
             return new Rectangle(
-                (int)((barX - (BAR_WIDTH_RATIO / 2)) * screenSize.Width),
+                (int)((barX * screenSize.Width)),
                 (int)(BARS_SCREEN_POSITION_RATIO_Y.y_top * screenSize.Height),
-                (int)(((barX + (BAR_WIDTH_RATIO / 2)) - (barX - (BAR_WIDTH_RATIO / 2))) * screenSize.Width),
+                (int)((barX * screenSize.Width) + BAR_WIDTH),
                 (int)((BARS_SCREEN_POSITION_RATIO_Y.y_bottom - BARS_SCREEN_POSITION_RATIO_Y.y_top) * screenSize.Height)
                 );
         }
 
+        private System.Timers.Timer Updater { get; init; }
+
+        private Rectangle HpZone { get; init; }
+        private Rectangle MpZone { get; init; }
+
         public BarStatus(Screen screen)
         {
-            var HpZone = GetBarRectangle(screen, BarType.HP);
-            var MpZone = GetBarRectangle(screen, BarType.MP);
+            HpZone = GetBarRectangle(screen, BarType.HP);
+            MpZone = GetBarRectangle(screen, BarType.MP);
 
-            var updater = new System.Windows.Forms.Timer();
-            updater.Interval = 10;
-            updater.Tick += (sender, e) =>
+            Updater = new System.Timers.Timer();
+            Updater.Elapsed += Update;
+            Updater.Interval = UPDATE_INTERVAL;
+            Updater.Start();
+        }
+
+        private void Update(object? sender, EventArgs e)
+        {
+            var bmp = new Bitmap(HpZone.Width, HpZone.Height);
+            var g = Graphics.FromImage(bmp);
+            g.CopyFromScreen(HpZone.Location, Point.Empty, HpZone.Size);
+            var hp = GetBarStatus(bmp, BarType.HP);
+            Hp = hp;
+
+            bmp = new Bitmap(MpZone.Width, MpZone.Height);
+            g = Graphics.FromImage(bmp);
+            g.CopyFromScreen(MpZone.Location, Point.Empty, MpZone.Size);
+            var mp = GetBarStatus(bmp, BarType.MP);
+            Mp = mp;
+        }
+
+        public void Stop()
+        {
+            if (Updater.Enabled)
             {
-                var bmp = new Bitmap(HpZone.Width, HpZone.Height);
-                var g = Graphics.FromImage(bmp);
-                g.CopyFromScreen(HpZone.Location, Point.Empty, HpZone.Size);
-                var hp = GetBarStatus(bmp, BarType.HP);
-                if (hp != float.NaN)
-                {
-                    Hp = hp;
-                }
-                bmp = new Bitmap(MpZone.Width, MpZone.Height);
-                g = Graphics.FromImage(bmp);
-                g.CopyFromScreen(MpZone.Location, Point.Empty, MpZone.Size);
-                var mp = GetBarStatus(bmp, BarType.MP);
-                if (mp != float.NaN)
-                {
-                    Mp = mp;
-                }
-            };
+                Updater.Stop();
+            }
         }
 
         float GetBarStatus(Bitmap bmp, BarType bar)
         {
+            var colors = GetBarAvgChannels(bmp);
 
+            return 0f;
+        }
+
+        Color[] GetBarAvgChannels(Bitmap bmp)
+        {
+            Color[] avgColors = new Color[bmp.Height];
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                var colors = new Color[bmp.Width];
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    colors[x] = bmp.GetPixel(x, y);
+                }
+                avgColors[y] = Color.FromArgb(
+                    (int)colors.Average(c => c.A),
+                    (int)colors.Average(c => c.R),
+                    (int)colors.Average(c => c.G),
+                    (int)colors.Average(c => c.B)
+                    );
+            }
+            return avgColors;
         }
 
         public enum BarType
