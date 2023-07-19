@@ -83,7 +83,7 @@ void BackupSaves(List<GameSaveFolder> saves)
         {
             var backupFile = new FileInfo(Path.Combine(backupDir.FullName, save.BackupFileName));
             if (backupFile.Exists) { Errors.Show($"已存在同名备份文件，程序错误:\n{backupFile.FullName}"); }
-            ZipFile.CreateFromDirectory(save.FullPath, backupFile.FullName);
+            ZipFile.CreateFromDirectory(save.FullPath, backupFile.FullName, CompressionLevel.Optimal, true);
             Console.WriteLine($"已备份存档：{save.BackupFileName}");
         }
     }
