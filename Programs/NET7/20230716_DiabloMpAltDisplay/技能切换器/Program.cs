@@ -37,8 +37,8 @@ keyboardHook.Down += (_, args) =>
         case Key.D2:
             SwitchToSkill((6, 2), 1, true);
             break;
-        case Key.D3:
-            SwitchToSkill((1, 3), 1, true);
+        case Key.D3: // 火盾
+            SwitchToSkill((1, 3), 3, true);
             break;
         case Key.D4:
             SwitchToSkill((2, 3), 1, true);
@@ -47,6 +47,14 @@ keyboardHook.Down += (_, args) =>
         case Key.D5:
             SwitchToSkill((3, 3), 3, true);
             break;
+
+        case Key.D6: // 暴风雪
+            SwitchToSkill((2, 5), 2, true);
+            break;
+        case Key.D7: // 火陨石
+            SwitchToSkill((3, 5), 2, true);
+            break;
+
 
         case Key.T:
             SwitchToSkill((4, 3), 3, true);
@@ -67,7 +75,7 @@ void SwitchToSkill((int x, int y) skillIndex, int barIndex, bool autoTrigger = f
     Action<VirtualKeyCode> Press = (key) =>
     {
         sim.Keyboard.KeyDown(key);
-        sim.Keyboard.Sleep(15);
+        sim.Keyboard.Sleep(10);
         sim.Keyboard.KeyUp(key);
     };
 

@@ -1,0 +1,15 @@
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\bin\Debug\net7.0\定时备份.exe
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\bin\Debug\net7.0\定时备份.deps.json
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\bin\Debug\net7.0\定时备份.runtimeconfig.json
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\bin\Debug\net7.0\定时备份.dll
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\bin\Debug\net7.0\定时备份.pdb
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.csproj.AssemblyReference.cache
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.GeneratedMSBuildEditorConfig.editorconfig
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.AssemblyInfoInputs.cache
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.AssemblyInfo.cs
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.csproj.CoreCompileInputs.cache
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.dll
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\refint\定时备份.dll
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.pdb
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\定时备份.genruntimeconfig.cache
+D:\Win11\Administrator\Documents\GitHub\Bilibili_Shared\Programs\NET7\20230719_ProjectZomboidSavesAutoBackup\定时备份\obj\Debug\net7.0\ref\定时备份.dll
