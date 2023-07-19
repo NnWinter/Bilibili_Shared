@@ -30,8 +30,6 @@ while (true)
 
 List<GameSaveFolder> GetGameSaves(DirectoryInfo savesDir)
 {
-
-
     var saveFolders = new List<GameSaveFolder>();
 
     foreach (var modeFolder in savesDir.GetDirectories())
@@ -83,7 +81,17 @@ void BackupSaves(List<GameSaveFolder> saves)
         {
             var backupFile = new FileInfo(Path.Combine(backupDir.FullName, save.BackupFileName));
             if (backupFile.Exists) { Errors.Show($"已存在同名备份文件，程序错误:\n{backupFile.FullName}"); }
-            ZipFile.CreateFromDirectory(save.FullPath, backupFile.FullName, CompressionLevel.Optimal, true);
+
+            // 先复制文件夹到临时文件夹（必须，因为部分文件被锁定）
+            var tempDir = new DirectoryInfo(Path.Combine(backupDir.FullName, "temp"));
+            if (tempDir.Exists) { tempDir.Delete(true); }
+            tempDir.Create();
+
+            var toDir = new DirectoryInfo(Path.Combine(tempDir.FullName, save.FolderName));
+            CopyDirectory(save.FullPath, toDir.FullName);
+
+            // 创建压缩包
+            ZipFile.CreateFromDirectory(toDir.FullName, backupFile.FullName, CompressionLevel.Optimal, true);
             Console.WriteLine($"已备份存档：{save.BackupFileName}");
         }
     }
@@ -93,6 +101,40 @@ void BackupSaves(List<GameSaveFolder> saves)
     }
 }
 
+void CopyDirectory(string sourceDirName, string destDirName)
+{
+    // 获取源文件夹及其所有子目录
+    DirectoryInfo dir = new DirectoryInfo(sourceDirName);
+
+    if (!dir.Exists)
+    {
+        throw new DirectoryNotFoundException(
+            "源目录不存在或无法找到: "
+            + sourceDirName);
+    }
+
+    // 如果目标文件夹不存在则创建
+    if (!Directory.Exists(destDirName))
+    {
+        Directory.CreateDirectory(destDirName);
+    }
+
+    // 复制所有文件
+    FileInfo[] files = dir.GetFiles();
+    foreach (FileInfo file in files)
+    {
+        string tempPath = Path.Combine(destDirName, file.Name);
+        file.CopyTo(tempPath, false);
+    }
+
+    // 复制所有子文件夹
+    DirectoryInfo[] dirs = dir.GetDirectories();
+    foreach (DirectoryInfo subdir in dirs)
+    {
+        string tempPath = Path.Combine(destDirName, subdir.Name);
+        CopyDirectory(subdir.FullName, tempPath);
+    }
+}
 
 struct GameSaveFolder
 {
