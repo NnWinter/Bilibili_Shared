@@ -13,3 +13,6 @@
 | [BV1yN4y1R7bP](https://www.bilibili.com/video/BV1yN4y1R7bP) | 要么向外吸收，要么向内索取 | ⚪ | ⚪ | ⚪ | ⚪ | 熊羽的北漂成长日记 | 2023/09/01 | 1185 |
 | [BV1Cm4y1N7TV](https://www.bilibili.com/video/BV1Cm4y1N7TV) | 评论区也分男女？信息茧房？平台有不可推卸责任！ | ⚪ | ⚪ | ⚪ | ⚪ | 强势的汪酱 | 2023/09/04 | 1189 |
 | [BV1U94y147X8](https://www.bilibili.com/video/BV1U94y147X8) | 尹锡悦履行了反女权的承诺了吗？ | ⚪ | ⚪ | ⚪ | ⚪ | 卢诗翰 | 2023/09/01 | 1191 |
+| [BV1QF411674C](https://www.bilibili.com/video/BV1QF411674C) | 厉害了！这所高校学生自带被褥需要省级以上检验部门检测合格方可进校，检测费用自理！#吐槽 #吃瓜 | ⚪ | ⚪ | ⚪ | ⚪ | 爨个门子 | 2023/09/04 | 1193 |
+| [BV11p4y177GL](https://www.bilibili.com/video/BV11p4y177GL) | 信息茧房 | ⚪ | ⚪ | ⚪ | ⚪ | 小栗子哥 | 2023/09/05 | 1195 |
+| [BV1ow411S7z6](https://www.bilibili.com/video/BV1ow411S7z6) | 信息茧房：你只能看见程序想让你看见的…太吓人了… | ⚪ | ⚪ | ⚪ | ⚪ | 你才小鸡 | 2023/09/05 | 1197 |
