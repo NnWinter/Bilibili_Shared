@@ -16,3 +16,5 @@
 | [BV1QF411674C](https://www.bilibili.com/video/BV1QF411674C) | 厉害了！这所高校学生自带被褥需要省级以上检验部门检测合格方可进校，检测费用自理！#吐槽 #吃瓜 | ⚪ | ⚪ | ⚪ | ⚪ | 爨个门子 | 2023/09/04 | 1193 |
 | [BV11p4y177GL](https://www.bilibili.com/video/BV11p4y177GL) | 信息茧房 | ⚪ | ⚪ | ⚪ | ⚪ | 小栗子哥 | 2023/09/05 | 1195 |
 | [BV1ow411S7z6](https://www.bilibili.com/video/BV1ow411S7z6) | 信息茧房：你只能看见程序想让你看见的…太吓人了… | ⚪ | ⚪ | ⚪ | ⚪ | 你才小鸡 | 2023/09/05 | 1197 |
+| [BV1HH4y1X7UV](https://www.bilibili.com/video/BV1HH4y1X7UV) | 别太过分了！是男是女首先都是个生命 | ⚪ | ⚪ | ⚪ | ⚪ | 呋呋FuFuu | 2023/09/05 | 1198 |
+| [BV11j411y748](https://www.bilibili.com/video/BV11j411y748) | 【粉丝案例】为啥法律支持离婚时，女人可以分走半套房？ | ⚪ | ⚪ | ⚪ | ⚪ | 杰哥男性成长 | 2023/09/05 | 1201 |
