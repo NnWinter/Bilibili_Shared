@@ -21,3 +21,5 @@
 | [BV1mG411R7Lb](https://www.bilibili.com/video/BV1mG411R7Lb) | 乐子人的快乐时光，哈哈哈哈哈哈（补档第三次） | ⚪ | ⚪ | ⚪ | ⚪ | 强势的汪酱 | 2023/09/06 | 1203 |
 | [BV1P8411X7iX](https://www.bilibili.com/video/BV1P8411X7iX) | 【女主你别脑补08】穿越成十恶不赦的坏蛋，可这届女主怎么都这么能脑补！ | ⚪ | ⚪ | ⚪ | ⚪ | 圆桌动漫 | 2023/08/25 | 1207 |
 | [BV1WG411R7oQ](https://www.bilibili.com/video/BV1WG411R7oQ) | 【杰哥】七夕婚恋市场惨淡，舔狗经济崩盘，女硕士在日本饿死，男女关系已快进至日服2.0版本！ | ⚪ | ⚪ | ⚪ | ⚪ | 杰哥男性成长 | 2023/09/07 | 1208 |
+| [BV1Hh4y1P7Md](https://www.bilibili.com/video/BV1Hh4y1P7Md) | 努力的结果是，努力的空间更大了 | ⚪ | ⚪ | ⚪ | ⚪ | 熊羽的北漂成长日记 | 2023/09/06 | 1211 |
+| [BV1HH4y1D77o](https://www.bilibili.com/video/BV1HH4y1D77o) | 魔幻！女子在日本活活饿死，死前不忘诅咒中国 | ⚪ | ⚪ | ⚪ | ⚪ | 不正经老丝 | 2023/09/09 | 1212 |
