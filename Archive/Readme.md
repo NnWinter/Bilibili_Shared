@@ -25,3 +25,6 @@
 | [BV1HH4y1D77o](https://www.bilibili.com/video/BV1HH4y1D77o) | 魔幻！女子在日本活活饿死，死前不忘诅咒中国 | ⚪ | ⚪ | ⚪ | ⚪ | 不正经老丝 | 2023/09/09 | 1212 |
 | [BV1Tw411X7o4](https://www.bilibili.com/video/BV1Tw411X7o4) | 【巴勒斯坦】X【赛博朋克2077】我们永不消逝！ | ⚪ | ⚪ | ⚪ | ⚪ | 破防又暴击 | 2023/10/21 | 1240 |
 | [BV1P94y157AD](https://www.bilibili.com/video/BV1P94y157AD) | 【地球生物搞笑日常#94】 | ⚪ | ⚪ | ⚪ | ⚪ | 舍利子对撞机 | 2023/10/26 | 1242 |
+| [BV1ge411672u](https://www.bilibili.com/video/BV1ge411672u) | 某音上的那些男版甜妹 | ⚪ | ⚪ | ⚪ | ⚪ | 抽象皇帝小政 | 2023/12/28 | 1355 |
+| [BV1ni4y1673B](https://www.bilibili.com/video/BV1ni4y1673B) | 开宾利的男人都喜欢二手货吗？ | ⚪ | ⚪ | ⚪ | ⚪ | 抽象皇帝小政 | 2023/12/29 | 1357 |
+| [BV1YQ4y1J7GM](https://www.bilibili.com/video/BV1YQ4y1J7GM) | 如果是你你会当这个接盘侠吗 | ⚪ | ⚪ | ⚪ | ⚪ | 抽象皇帝小政 | 2023/12/31 | 1359 |
