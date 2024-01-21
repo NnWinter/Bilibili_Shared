@@ -81,7 +81,7 @@ try
     File.WriteAllLines(outPath, lines);
     Console.WriteLine("完成，按任意键退出"); Console.ReadKey(); return;
 }
-catch (Exception e) { Console.WriteLine("运行中出现了错误: {0}", e.Message); }
+catch (Exception e) { Console.WriteLine("运行中出现了错误: {0}", e.Message); Console.ReadKey(); return;}
 
 //替换 Match 中指定 group 的方法
 string RegexReplaceWith(Match match, string[] replacements)
